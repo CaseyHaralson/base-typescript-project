@@ -1,0 +1,27 @@
+{
+  "name": "base-typescript-project",
+  "version": "1.0.0",
+  "private": true,
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "build:clean": "npx rimraf ./build && npx rimraf tsconfig.tsbuildinfo",
+    "build:watch": "tsc -b -w",
+    "lint": "npx eslint . --report-unused-disable-directives --max-warnings=0",
+    "prettier": "npx prettier --write .",
+    "prettier:check": "npx prettier --check .",
+    "start": "node .",
+    "start:watch": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "eslint": "^8.37.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "rimraf": "^4.4.1",
+    "typescript": "^5.0.3"
+  }
+}
