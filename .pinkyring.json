@@ -1,0 +1,16 @@
+{
+  "templateName": "base-typescript-project",
+  "pinkyringVersion": "1.0.0",
+  "removableOptions": [
+    {
+      "label": "DOCKER",
+      "globPatterns": [
+        "docker",
+        "src/gracefulShutdown.ts",
+        ".dockerignore",
+        "docker-compose.yml"
+      ],
+      "contentPattern": ".pinkyring=DOCKER"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+**/node_modules
+**/build
+
+.git
+docker
+
+.dockerignore
+.eslintrc.json
+.gitignore
+.prettierignore
+.prettierrc.json
+docker-compose.yml
+README.md
+tsconfig.tsbuildinfo
