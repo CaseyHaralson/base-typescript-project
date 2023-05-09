@@ -1,4 +1,4 @@
-# base-typescript-project
+# starter-typescript-project
 
 To get started locally, run the following commands from the project root directory:
 
