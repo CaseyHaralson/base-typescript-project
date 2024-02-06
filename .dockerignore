@@ -2,13 +2,14 @@
 **/build
 
 .git
-docker
+devops
 
 .dockerignore
 .eslintrc.json
 .gitignore
+.pinkyring.json
 .prettierignore
 .prettierrc.json
-docker-compose.yml
+Dockerfile
 README.md
 tsconfig.tsbuildinfo

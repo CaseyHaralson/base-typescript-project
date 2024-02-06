@@ -7,9 +7,13 @@
     "build": "tsc -b",
     "build:clean": "npx rimraf ./build && npx rimraf tsconfig.tsbuildinfo",
     "build:watch": "tsc -b -w",
+    "build:prod": "tsc --project tsconfig.prod.json",
     "lint": "npx eslint . --report-unused-disable-directives --max-warnings=0",
     "prettier": "npx prettier --write .",
     "prettier:check": "npx prettier --check .",
+    "docker:build": "docker build -t starter-typescript-project:latest .",
+    "docker:run": "docker run -p 3000:3000 --name starter-typescript-project -d starter-typescript-project",
+    "docker:stop": "docker stop starter-typescript-project && docker rm starter-typescript-project",
     "start": "node .",
     "start:watch": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"

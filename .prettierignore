@@ -4,4 +4,9 @@
 
 *.json
 *.md
+*.yml
 *.yaml
+
+.dockerignore
+.gitignore
+.prettierignore
