@@ -23,7 +23,7 @@ const options: PostgresConnectionOptions = {
   synchronize: env === 'development' ? true : false,
   migrationsRun: false,
   entities: ['./build/entities/**/*.js'],
-  migrations: ['./build/db/migrations/**/*.js'],
+  migrations: ['./build/relationalDB/migrations/**/*.js'],
   logger: new TypeORMLogger(),
   ssl: serverCA
     ? ({
