@@ -8,6 +8,13 @@ npm run build
 npm run start
 ```
 
+You can also run the build and files in watch mode, but each command will need to be run in its own shell:
+```
+npm run build:watch
+
+npm run start:watch
+```
+
 [//]: # (.pinkyring=DOCKER)
 
 ## Docker
