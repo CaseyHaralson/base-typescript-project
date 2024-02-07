@@ -93,7 +93,7 @@ Several npm scripts have been created to help with database tasks (run like `npm
 To connect to the database and start using TypeORM:
 
 ```
-import {AppDataSource, waitForDatabaseConnection} from './relationalDB/appDataSource';
+import {AppDataSource, waitForDatabaseConnection} from './relationalDb/appDataSource';
 import {DemoEntity} from './entities/demoEntity';
 
 // wait for the database connection to be ready
