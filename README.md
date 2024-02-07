@@ -106,4 +106,39 @@ const allDemoEntities = await AppDataSource.getRepository(DemoEntity).find();
 
 [//]: # (.pinkyring=POSTGRES.end)
 
+[//]: # (.pinkyring=REDIS)
+
+### Redis
+
+[^1]
+
+Redis has been added as an in-memory data store and cache.
+
+The configuration for redis is done in the [config.ts file](./src/cache/config.ts).
+The following environment variable configurations can be set (or these defaults can be used during development):
+
+```
+REDIS_HOST    = localhost
+REDIS_PORT    = 6379
+
+REDIS_AUTH_PASS
+REDIS_HOST_CERT
+```
+
+To connect to the cache and start using Redis:
+
+```
+import {Cache, waitForCacheConnection} from './cache/cache';
+
+// wait for the cache connection to be ready
+await waitForCacheConnection();
+
+// start using the connection
+const cache = Cache;
+await cache.set('key', 'value');
+const value = cache.get('key');
+```
+
+[//]: # (.pinkyring=REDIS.end)
+
 [^1]: This functionality is removable with [pinkyring](https://www.npmjs.com/package/pinkyring)
