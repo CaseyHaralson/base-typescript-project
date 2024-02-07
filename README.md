@@ -57,7 +57,11 @@ npm run infra
 npm run infra:stop
 ```
 
+[//]: # (.pinkyring=POSTGRES)
+
 ### Relational DB
+
+[^1]
 
 Postgres has been added as the relational database, and [TypeORM](https://typeorm.io/) has been added as the ORM.
 
@@ -86,4 +90,19 @@ Several npm scripts have been created to help with database tasks (run like `npm
 - `db:migration:run` to update the database schema
 - `db:drop` to drop the database. Use with caution, obviously.
 
-[^1]: Removable with pinkyring
+To connect to the database and start using TypeORM:
+
+```
+import {AppDataSource, waitForDatabaseConnection} from './relationalDB/appDataSource';
+import {DemoEntity} from './entities/demoEntity';
+
+// wait for the database connection to be ready
+await waitForDatabaseConnection();
+
+// start using the connection
+const allDemoEntities = await AppDataSource.getRepository(DemoEntity).find();
+```
+
+[//]: # (.pinkyring=POSTGRES.end)
+
+[^1]: This functionality is removable with [pinkyring](https://www.npmjs.com/package/pinkyring)
