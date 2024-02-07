@@ -5,10 +5,8 @@
     {
       "label": "DOCKER",
       "globPatterns": [
-        "docker",
-        "src/gracefulShutdown.ts",
         ".dockerignore",
-        "docker-compose.yml"
+        "Dockerfile"
       ],
       "contentPattern": ".pinkyring=DOCKER"
     }
