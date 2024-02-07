@@ -9,6 +9,18 @@
         "Dockerfile"
       ],
       "contentPattern": ".pinkyring=DOCKER"
+    },
+    {
+      "label": "POSTGRES & TYPEORM",
+      "globPatterns": [
+        "src/entities/demoEntity.ts",
+        "src/relationalDB"
+      ],
+      "contentPattern": ".pinkyring=POSTGRES",
+      "packageNames": [
+        "typeorm",
+        "typeorm-extension"
+      ]
     }
   ]
 }

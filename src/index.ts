@@ -1,4 +1,5 @@
 import {getLogger} from './logger';
+import {sleep} from './util';
 
 const log = getLogger('main');
 
@@ -10,10 +11,9 @@ hello();
 // ======================================
 //    top level async/await example
 
-const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 async function slowHello() {
   log.info('Slow Hello: waiting 5 seconds before saying hello...');
-  await delay(5000);
+  await sleep(5000);
   log.info('Heeeeelllllllooooooo');
 }
 

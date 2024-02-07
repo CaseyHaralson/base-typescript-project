@@ -8,6 +8,8 @@
     "sourceMap": true,
     "isolatedModules": true,
     "module": "NodeNext",
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "NodeNext",
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false
   }
 }
