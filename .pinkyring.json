@@ -8,7 +8,12 @@
         ".dockerignore",
         "Dockerfile"
       ],
-      "contentPattern": ".pinkyring=DOCKER"
+      "contentPattern": ".pinkyring=DOCKER",
+      "scriptNames": [
+        "docker:build",
+        "docker:run",
+        "docker:stop"
+      ]
     },
     {
       "label": "POSTGRES & TYPEORM",
@@ -18,8 +23,16 @@
       ],
       "contentPattern": ".pinkyring=POSTGRES",
       "packageNames": [
+        "pg",
         "typeorm",
         "typeorm-extension"
+      ],
+      "scriptNames": [
+        "db:create",
+        "db:seed",
+        "db:migration:generate",
+        "db:migration:run",
+        "db:drop"
       ]
     }
   ]
