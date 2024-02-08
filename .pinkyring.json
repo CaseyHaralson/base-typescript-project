@@ -44,6 +44,16 @@
       "packageNames": [
         "redis"
       ]
+    },
+    {
+      "label": "MONGO",
+      "globPatterns": [
+        "src/documentDB"
+      ],
+      "contentPattern": ".pinkyring=MONGO",
+      "packageNames": [
+        "mongo"
+      ]
     }
   ]
 }

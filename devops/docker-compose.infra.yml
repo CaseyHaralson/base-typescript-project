@@ -42,6 +42,40 @@ services:
       - redis:/data
   # .pinkyring=REDIS.end
 
+  # .pinkyring=MONGO
+  mongo:
+    container_name: mongo
+    image: mongo:7.0.5
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo:/data/db
+      - mongoConfig:/data/configdb
+
+  # default auth credentials?: admin:pass
+  mongo-express:
+    container_name: mongo-express
+    image: mongo-express:1.0.2-20-alpine3.19
+    restart: always
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+    ports:
+      - 8081:8081
+    volumes:
+      - mongo-express:/data/db
+    depends_on:
+      mongo:
+        condition: service_started
+  # .pinkyring=MONGO.end
+
+# find which volumes need to be created:
+# docker image inspect {imageid or name:tag} --format {{.Config.Volumes}}
 volumes:
   # .pinkyring=POSTGRES
   postgres:
@@ -50,3 +84,8 @@ volumes:
   # .pinkyring=REDIS
   redis:
   # .pinkyring=REDIS.end
+  # .pinkyring=MONGO
+  mongo:
+  mongoConfig:
+  mongo-express:
+  # .pinkyring=MONGO.end
