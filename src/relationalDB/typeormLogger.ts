@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import {AbstractLogger, LogLevel, LogMessage, QueryRunner} from 'typeorm';
 import {getLogger} from '../logger';
 

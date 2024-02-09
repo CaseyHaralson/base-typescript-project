@@ -1,14 +1,10 @@
-import {
-  DocumentClient,
-  waitForDocumentDatabaseConnection,
-} from './documentDB/documentClient';
 import {getLogger} from './logger';
 import {sleep} from './util';
 
-const log = getLogger('main');
+const log = getLogger('index');
 
 function hello() {
-  log.info('Hello, World!');
+  log.info('Hello, World! (find me in /src/index.ts)');
 }
 hello();
 

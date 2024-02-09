@@ -6,7 +6,7 @@ export default class DemoEntitySeeder implements Seeder {
   public async run(
     dataSource: DataSource,
     factoryManager: SeederFactoryManager
-  ): Promise<any> {
+  ): Promise<void> {
     const entityFactory = await factoryManager.get(DemoEntity);
     await entityFactory.saveMany(1000);
   }
