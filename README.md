@@ -119,11 +119,10 @@ The configuration for the database is done in the [config.ts file](./src/documen
 The following environment variable configurations can be set (or these defaults can be used during development):
 
 ```
-MONGO_USER      = root
-MONGO_PASSWORD  = example
+MONGO_USER      = mongo
+MONGO_PASSWORD  = mongo
 MONGO_HOST      = localhost
 MONGO_PORT      = 27017
-MONGO_DB        = db
 ```
 
 To connect to the database and start using Mongo:
@@ -135,7 +134,7 @@ import {DocumentClient, waitForDocumentDatabaseConnection} from './documentDB/do
 await waitForDocumentDatabaseConnection();
 
 // start using the connection
-const allDemoEntities = await AppDataSource.getRepository(DemoEntity).find();
+await DocumentClient.db('db').collection('test').insertOne({hello: 'world'});
 ```
 
 [//]: # (.pinkyring=MONGO.end)

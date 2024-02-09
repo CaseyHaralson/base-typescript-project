@@ -1,3 +1,7 @@
+import {
+  DocumentClient,
+  waitForDocumentDatabaseConnection,
+} from './documentDB/documentClient';
 import {getLogger} from './logger';
 import {sleep} from './util';
 
