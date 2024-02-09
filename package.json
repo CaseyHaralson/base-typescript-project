@@ -44,5 +44,10 @@
     "redis": "^4.6.13",
     "typeorm": "^0.3.20",
     "typeorm-extension": "^3.4.0"
+  },
+  "overrides": {
+    "typeorm": {
+      "mongodb": "^6.3.0"
+    }
   }
 }
