@@ -36,6 +36,16 @@
       ]
     },
     {
+      "label": "MONGO",
+      "globPatterns": [
+        "src/documentDB"
+      ],
+      "contentPattern": ".pinkyring=MONGO",
+      "packageNames": [
+        "mongodb"
+      ]
+    },
+    {
       "label": "REDIS",
       "globPatterns": [
         "src/cache"
@@ -43,16 +53,6 @@
       "contentPattern": ".pinkyring=REDIS",
       "packageNames": [
         "redis"
-      ]
-    },
-    {
-      "label": "MONGO",
-      "globPatterns": [
-        "src/documentDB"
-      ],
-      "contentPattern": ".pinkyring=MONGO",
-      "packageNames": [
-        "mongo"
       ]
     }
   ]
