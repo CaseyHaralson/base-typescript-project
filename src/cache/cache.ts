@@ -6,13 +6,14 @@ import {sleep} from '../util';
 
 const log = getLogger('Cache');
 
+log.info(`initializing connection to cache...`);
 const client = createClient(cache_config);
 client.on('error', (err) => log.error(err));
 client.connect();
 GracefulShutdown.Instance.registerAfterServerShutdownCallback(async () => {
-  log.info('Disconnecting from redis cache...');
+  log.info('Disconnecting from cache...');
   await client.quit();
-  log.info('Disconnected from redis cache.');
+  log.info('Disconnected from cache.');
 });
 
 export {client as Cache};
