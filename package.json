@@ -20,7 +20,7 @@
     "infra:stop": "docker compose -f ./devops/docker-compose.infra.yml -p starter-typescript-project down",
     "db:create": "typeorm-extension db:create --dataSource ./build/relationalDB/config.js",
     "db:seed": "typeorm-extension seed:run --dataSource ./build/relationalDB/seed/config.js",
-    "db:migration:generate": "cross-var typeorm migration:generate -d ./build/relationalDB/config.js ./src/relationalDB/migrations/$npm_config_name",
+    "db:migration:generate": "cross-replace typeorm migration:generate -d ./build/relationalDB/config.js ./src/relationalDB/migrations/$npm_config_name",
     "db:migration:run": "typeorm migration:run -d ./build/relationalDB/config.js",
     "db:drop": "typeorm-extension db:drop --dataSource ./build/relationalDB/config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -29,7 +29,7 @@
     "@tsconfig/node18": "^1.0.1",
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "cross-var": "^1.1.0",
+    "cross-replace": "^0.2.0",
     "eslint": "^8.37.0",
     "nodemon": "^2.0.22",
     "prettier": "^2.8.7",
