@@ -15,6 +15,20 @@ npm run build:watch
 npm run start:watch
 ```
 
+Installing new packages (and just for a dev dependency):
+
+```
+npm install [package]
+
+npm install [package] -D
+```
+
+Updating the package.json to the newest dependency versions and updating the package-lock.json file requires a few steps:
+
+1. `npx npm-check-updates -u` to update the package.json with the most up-to-date versions
+2. `npm install` to install the updated packages from the last step
+3. `npm update` cleans up the install
+
 [//]: # (.pinkyring=DOCKER)
 
 ## Docker
