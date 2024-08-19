@@ -26,28 +26,28 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.2",
-    "@types/node": "^20.11.17",
-    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^22.4.1",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
     "cross-replace": "^0.2.0",
     "eslint": "^8.56.0",
-    "nodemon": "^3.0.3",
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "typescript": "^5.3.3"
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.4"
   },
   "dependencies": {
     "graceful-sd": "^0.4.0",
-    "mongodb": "^6.3.0",
-    "pg": "^8.11.3",
-    "pino": "^8.18.0",
-    "redis": "^4.6.13",
+    "mongodb": "^6.8.0",
+    "pg": "^8.12.0",
+    "pino": "^9.3.2",
+    "redis": "^4.7.0",
     "typeorm": "^0.3.20",
-    "typeorm-extension": "^3.5.0"
+    "typeorm-extension": "^3.6.1"
   },
   "overrides": {
     "typeorm": {
-      "mongodb": "^6.3.0"
+      "mongodb": "^6.8.0"
     }
   }
 }
